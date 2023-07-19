@@ -1,5 +1,6 @@
 import os
 from dotenv import dotenv_values
+from enum import Enum
 
 CONFIG = {
     **dotenv_values('.env'),
@@ -18,3 +19,9 @@ DELETE_RESERVATION_ENDPOINT = '/v2/reservations/{reservation_id}'
 
 DEFAULT_PERIOD_RATE_LIMIT = 1  # It reprensents one minute
 RATE_LIMIT_PER_PERIOD = int(CONFIG.get('RATE_LIMIT_PER_PERIOD', 30))
+
+
+class ReservationStatus(Enum):
+    COMPLETED = 'completed'
+    PENDING = 'pending'
+    FAILED = 'failed'

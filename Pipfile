@@ -8,6 +8,7 @@ pytest = "*"
 requests = "*"
 python-dotenv = "*"
 ratelimit = "*"
+flake8 = "*"
 
 [dev-packages]
 
