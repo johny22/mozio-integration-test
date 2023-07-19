@@ -4,11 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pytest = "*"
-requests = "*"
-python-dotenv = "*"
-ratelimit = "*"
-flake8 = "*"
+pytest = "7.4.0"
+requests = "2.31.0"
+python-dotenv = "1.0.0"
+ratelimit = "2.2.1"
+flake8 = "6.0.0"
 
 [dev-packages]
 

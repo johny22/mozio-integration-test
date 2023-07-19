@@ -1,0 +1,17 @@
+certifi==2023.5.7
+charset-normalizer==3.2.0
+exceptiongroup==1.1.2
+flake8==6.0.0
+idna==3.4
+iniconfig==2.0.0
+mccabe==0.7.0
+packaging==23.1
+pluggy==1.2.0
+pycodestyle==2.10.0
+pyflakes==3.0.1
+pytest==7.4.0
+python-dotenv==1.0.0
+ratelimit==2.2.1
+requests==2.31.0
+tomli==2.0.1
+urllib3==2.0.3
