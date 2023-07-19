@@ -1,24 +1,21 @@
-import os
-from dotenv import dotenv_values
-
-from mozio_api_integration.api_client import MozioAPIClient
-from mozio_api_integration.constants import *
+from mozio_api_integration.use_cases.mozio_booking_flow_use_case import MozioBookingFlowUseCase
 
 
-config = {
-    **dotenv_values('.env'),
-    **dotenv_values('.env.secrets'),
-    **os.environ,
+use_case = MozioBookingFlowUseCase()
+request_params = {
+    'provider_name': 'Dummy External Provider',
+    'start_address': '44 Tehama Street, San Francisco, CA, USA',
+    'end_address': 'SFO',
+    'mode': 'one_way',
+    'pickup_datetime': '2023-12-01 15:30',
+    'num_passengers': 2,
+    'currency': 'USD',
+    'campaign': 'JONES ROMÃO BEZERRA',
+    'email': 'mailtest002@gmail.com',
+    'phone_number': '+5511999999997',
+    'first_name': 'Xico',
+    'last_name': 'Tripa',
+    'airline': 'AA',
+    'flight_number': '123'
 }
-
-import pdb
-# pdb.set_trace()
-API_KEY = config['MOZIO_INTEGRATION_API_KEY']
-print(API_KEY)
-print(RATE_LIMIT_PER_PERIOD)
-
-client = MozioAPIClient(API_KEY)
-response = client.get(
-    GET_SEARCH.format(search_id='0d0e136562854492a2c2629b384a40eb')
-)
-print(response)
+use_case.execute(**request_params)

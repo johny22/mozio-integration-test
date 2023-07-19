@@ -21,7 +21,7 @@ class MozioAPIClient:
             return response.json()
         except Exception as e:
             raise e
-    
+
     @limits(calls=RATE_LIMIT_PER_PERIOD, period=DEFAULT_PERIOD_RATE_LIMIT)
     def post(self, method_url, payload):
         try:
@@ -35,7 +35,7 @@ class MozioAPIClient:
             return response.json()
         except Exception as e:
             raise e
-    
+
     @limits(calls=RATE_LIMIT_PER_PERIOD, period=DEFAULT_PERIOD_RATE_LIMIT)
     def delete(self, method_url):
         try:
